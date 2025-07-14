@@ -1,14 +1,13 @@
-import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config(); // carga las variables de entorno desde el archivo .env
+import express from 'express';
 import cors from 'cors';
+import './config/db.js'; // Importa la configuración de la base de datos
 import authRouter from './routes/auth.routes.js';
 import categoriasRouter from './routes/categorias.routes.js';
 import productosRouter from './routes/productos.routes.js'; // Importa las rutas
 
 const app = express(); // para crear la aplicación de express
-
-dotenv.config(); // carga las variables de entorno desde el archivo .env
-
 const PORT = process.env.PORT || 3000; // puerto donde se ejecutará la aplicación
 
 //middlewares

@@ -2,7 +2,7 @@
 GET http://localhost:3000/productos
 
 ### Devolver un producto por su ID
-GET http://localhost:3000/productos/10000
+GET http://localhost:3000/productos/1
 
 
 ### Crear un nuevo producto
@@ -13,45 +13,101 @@ Content-Type: application/json
 #     "nombre": "Pringles Original Sabor",
 #     "precio": 15.99,
 #     "descripcion": "Patatas fritas envasadas con sabor original, lata de 200g",
-#     "disponible": true
+#     "disponible": true,
+#     "categoriaId": 1
+# }
+
+# {
+#     "nombre": "Caafé molido",
+#     "precio": 10.50,
+#     "descripcion": "Café molido de origen colombiano, bolsa de 500g",
+#     "disponible": false,
+#     "categoriaId": 4
 # }
 
 # {
 #     "nombre": "Galletas de chocolate",
-#     "precio": "5.99",
+#     "precio": 10.99,
 #     "descripcion": "Galletas de chocolate con trozos de chocolate, paquete de 200g",
-#     "disponible": "true"
+#     "disponible": true,
+#     "categoriaId": 7
 # }
 
 # {
-#     "nombre": "Café molido",
+#     "nombre": "Refresco de mora natural",
 #     "precio": 12.50,
-#     "descripcion": "Café molido de origen colombiano, bolsa de 250g"
+#     "descripcion": "Refresco de mora natural, lata de 330ml",
+#     "disponible": true
+# }
+
+# {
+#     "nombre": "Refresco de mora natural",
+#     "precio": 12.50,
+#     "descripcion": "Refresco de mora natural, lata de 330ml",
+#     "disponible": true,
+#     "categoriaId": 7
 # }
 
 {
-    "nombre": "Refresco de mora natural",
-    "precio": 12.50,
-    "descripcion": "Refresco de mora natural, lata de 330ml",
-    "disponible": true
+  "nombre": "Laptop",
+  "precio": 599.99,
+  "descripcion": "Laptop moderna con 8GB RAM y 256GB SSD",
+  "disponible": true,
+  "categoriaId": 2
 }
 
 
+
 ### Actualizar un producto por su ID
-PUT http://localhost:3000/productos/10000
+PUT http://localhost:3000/productos/2
 Content-Type: application/json
 
 {
-    "nombre": "Café molido",
+    "nombre": "Caafé molido",
     "precio": 12.50,
     "descripcion": "Café molido de origen colombiano, bolsa de 500g",
-    "disponible": true
+    "disponible": true,
+    "categoriaId": 7
 }
 
 
 ### Eliminar un producto por su ID
-DELETE http://localhost:3000/productos/10008
+DELETE http://localhost:3000/productos/4
 
 
 ### Devolver solo los productos disponibles
 GET http://localhost:3000/productos/disponibles
+
+
+
+###################### CATEGORÍAS ######################
+
+### Devolver todas las categorías
+GET http://localhost:3000/categorias
+
+### Devolver una categoría por su ID
+GET http://localhost:3000/categorias/1
+
+### Crear una nueva categoría
+POST http://localhost:3000/categorias   
+Content-Type: application/json
+
+# {
+#     "nombre": "Comida"
+# }
+
+{
+    "nombre": "Bebidas"
+}
+
+### Actualizar una nueva categoría
+PUT  http://localhost:3000/categorias/7   
+Content-Type: application/json
+
+{
+    "nombre": "Comida y otras cosas"
+}
+
+### Eliminar una categoría por su ID
+DELETE http://localhost:3000/categorias/1
+

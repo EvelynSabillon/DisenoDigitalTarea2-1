@@ -1,10 +1,13 @@
 import mysql from 'mysql2/promise'; // Importa el paquete mysql2/promise para usar promesas
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
-if (process.env.DB_HOST === undefined) {  // Verifica si las variables de entorno están definidas
-    dotenv.config(); // Carga las variables de entorno desde el archivo .env
-}
+// if (process.env.DB_HOST === undefined) {  // Verifica si las variables de entorno están definidas
+//     dotenv.config(); // Carga las variables de entorno desde el archivo .env
+// }
 
+// console.log('configurando conexión ')
+// console.log(process.env.DB_HOST)
+// console.log(process.env.DB_USER)
 // Crea una conexión a la base de datos MySQL usando las variables de entorno
 const pool = mysql.createPool({
     host: process.env.DB_HOST,

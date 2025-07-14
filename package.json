@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch index.js"
+    "dev": "node --watch -r dotenv/config index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.14.2",
     "resend": "^4.6.0",
+    "uuid": "^11.1.0",
     "zod": "^4.0.5"
   }
 }

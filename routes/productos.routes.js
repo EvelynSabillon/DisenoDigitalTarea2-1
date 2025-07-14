@@ -12,10 +12,10 @@ import {
 const productosRouter = Router(); // Crea un router para manejar las rutas de productos
 
 productosRouter.get('/', isAuth, getAll); 
+productosRouter.get('/disponibles', isAuth, getDisponibles); 
 productosRouter.get('/:id', isAuth, getById);
 productosRouter.post('/', isAuth, create);
 productosRouter.put('/:id', isAuth, update);
 productosRouter.delete('/:id', isAuth, remove);
-productosRouter.get('/disponibles', isAuth, getDisponibles); 
 
 export default productosRouter; // Exporta el router para usarlo en index.js
